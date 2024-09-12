@@ -13,17 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     addAnimationClass('.profile-picture', 'fade-in');
 });
 
-// Get references to the button and the skills section
-const toggleButton = document.getElementById('toggle-skills-btn');
-const skillsSection = document.getElementById('skills')?.querySelector('ul');
+// Toggle visibility for Skills section
+const toggleSkillsButton = document.getElementById('toggle-skills-btn');
+const skillsSection = document.querySelector('#skills ul');
 
-// Function to toggle the visibility of the skills section
-const toggleSkills = () => {
+toggleSkillsButton?.addEventListener('click', () => {
     if (skillsSection) {
-        // Toggle the 'hidden' class
+        // Toggle hidden class
         skillsSection.classList.toggle('hidden');
     }
-};
+});
 
-// Add an event listener to the button
-toggleButton?.addEventListener('click', toggleSkills);

@@ -23,7 +23,7 @@
     <!-- Objective Section -->
     <section id="objective">
         <h2>Objective</h2>
-        <p></p>
+        <p>Your career objective or statement goes here.</p>
     </section>
 
     <!-- About Me Section -->
@@ -57,11 +57,13 @@
             <li>Fine Arts Courses: World Memon Foundation Community Centre Trust (2021)</li>
         </ul>
     </section>
+
+
 <!-- Skills Section with Toggle Button -->
 <section id="skills">
     <h2>Skills</h2>
     <button id="toggle-skills-btn">Toggle Skills</button>
-    <ul>
+    <ul id="skills-list">
         <li>UX Design</li>
         <li>HTML, CSS, TypeScript</li>
         <li>Database Administration</li>
@@ -97,7 +99,7 @@
         <h2>Work Experience</h2>
         <ul>
             <li>Freelance Artist & Graphic Designer (2021–Present)</li>
-            <li>Geneticist at Plant breeding lab Lab (2018–Present)</li>
+            <li>Geneticist at Plant breeding Lab (2018–Present)</li>
             <li>IT Consultant at Corp (2020–2022)</li>
             <li>Aspiring UX Designer – Currently enrolled in Coursera’s Professional Certificate</li>
         </ul>
@@ -138,5 +140,24 @@
 </html>
 
 <script src="script.js"></script>
+
+<script>
+    // Get the button and the skills list
+    const toggleBtn = document.getElementById('toggle-skills-btn');
+    const skillsList = document.getElementById('skills-list');
+
+    // Add event listener to the button
+    toggleBtn.addEventListener('click', function() {
+        // Toggle the visibility of the skills list
+        if (skillsList.style.display === 'none' || skillsList.style.display === '') {
+            skillsList.style.display = 'block'; // Show the list
+        } else {
+            skillsList.style.display = 'none';  // Hide the list
+        }
+    });
+</script>
+
+</body>
+</html>
 
 
